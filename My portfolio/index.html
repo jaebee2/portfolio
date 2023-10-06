@@ -3,9 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo2.PNG" class="logo">
+                <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, i am <span>Jibril</span><br>Bulama @ Netlinks.uk </h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Highly motivated and talented Computing Graduate seeking a challenging role where I can contribute 
+                        to product development using the latest technologies. I am 
+                        eager to work on cutting-edge software design, leveraging my expertise in systems, low-level, kernel, 
+                        and device driver development. With a genuine interest in this field and a strong willingness to learn, I 
+                        am confident in making an immediate impact on the agent architecture development.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                                <li><span>Web development</span><br>Web Application Development</li>
+                                <li><span>DBMS</span><br>Database Managment </li>
+                                <li><span>Web Designer</span><br>HTML, css </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2019-2020</span><br>Frontend Developer trainee at University of Portsmouth Uk</li>
+                                <li><span>2020-2021</span><br>IT HelpDesk Technician at Jirwa and sons Nigeria</li>
+                                <li><span>2022-current</span><br>National Youth Service Corp</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2018</span><br>Foundation in Software Engineering </li>
+                                <li><span>2021</span><br>Certificate of Higher Education in Software Engineering</li>
+                                <li><span>2022</span><br>Bachelor of science Computing </li>
+                                
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Development</h2>
+                    <p>Are you looking to establish a strong online presence or enhance your existing website? Look no further! At Netlinks, we specialize in creating dynamic, visually appealing, and highly functional websites tailored to meet your unique business needs.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Frontend Developer</h2>
+                    <p>Are you looking to establish a strong online presence or enhance your existing website? Look no further! At Netlinks, we specialize in creating dynamic, visually appealing, and highly functional websites tailored to meet your unique business needs.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>UI/UX Designer</h2>
+                    <p>Are you looking to establish a strong online presence or enhance your existing website? Look no further! At Netlinks, we specialize in creating dynamic, visually appealing, and highly functional websites tailored to meet your unique business needs.</p>
+                    <a href="#">learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+             for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+             }
+             for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+             }
+
+             event.currentTarget.classList.add("active-link");
+             document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
 </body>
 </html>
